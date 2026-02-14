@@ -1,4 +1,4 @@
-FROM ghcr.io/qtproject/qt:6.6.2
+FROM kdeorg/qt6-sdk:6.6
 
 WORKDIR /app
 
