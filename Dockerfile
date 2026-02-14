@@ -1,27 +1,10 @@
-FROM ubuntu:22.04
-
-ENV DEBIAN_FRONTEND=noninteractive
-
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    cmake \
-    git \
-    wget \
-    ninja-build \
-    python3 \
-    libgl1-mesa-dev \
-    qt6-base-dev \
-    qt6-base-dev-tools \
-    qt6-tools-dev \
-    qt6-tools-dev-tools \
-    libqt6httpserver6-dev \
-    qmake6
+FROM ghcr.io/qtproject/qt:6.6.2
 
 WORKDIR /app
 
 COPY . .
 
-RUN qmake6 RGS_WebBackend.pro
+RUN qmake RGS_WebBackend.pro
 RUN make -j$(nproc)
 
 EXPOSE 8080
