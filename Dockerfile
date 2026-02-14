@@ -8,9 +8,11 @@ RUN apt-get update && apt-get install -y \
     qt6-base-dev-tools \
     qt6-tools-dev \
     qt6-tools-dev-tools \
+    qt6-httpserver-dev \
     qmake6 \
     cmake \
     git
+
 
 WORKDIR /app
 
