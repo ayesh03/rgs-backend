@@ -53,6 +53,9 @@ HEADERS += \
 
 DEFINES += QT_MESSAGELOGCONTEXT
 
+DISTFILES += \
+    Dockerfile
+
 
 
 
